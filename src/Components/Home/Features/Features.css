@@ -1,0 +1,25 @@
+.features-container{
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.section-container{
+    display: flex;
+    justify-content: center;
+}
+
+
+.half-image img{
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.features-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr
+    );
+}
+
+.half-width{
+    margin-top: 10px;
+}

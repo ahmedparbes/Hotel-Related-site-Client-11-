@@ -1,0 +1,19 @@
+.hotel-details{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+}
+
+.single-details{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.single-details img{
+    width: 80%;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.last-deal h2{
+    margin-bottom: 40px;
+}

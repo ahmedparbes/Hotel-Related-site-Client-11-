@@ -1,0 +1,23 @@
+.font{
+    font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Slab', serif;
+}
+
+.img-logo{
+    width: 150px;
+}
+
+
+.nav-link a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.register-btn{
+    margin-right: 10px;
+}
+.header-comp{
+background-color: rgb(225, 222, 228);
+}
