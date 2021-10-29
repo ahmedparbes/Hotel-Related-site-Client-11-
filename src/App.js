@@ -13,6 +13,7 @@ import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Admin from './Pages/Admin/Admin';
 import MyOrder from './Pages/Admin/MyOrder/MyOrder';
 import HotelDetails from './Pages/HotelDetails/HotelDetails';
+import AllOrders from './Pages/AllOrders/AllOrders';
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
             </Route>
             <Route path="/all-hotels">
               <HotelDetails></HotelDetails>
+            </Route>
+            <Route path="/all-orders">
+              <AllOrders></AllOrders>
             </Route>
 
           </Switch>

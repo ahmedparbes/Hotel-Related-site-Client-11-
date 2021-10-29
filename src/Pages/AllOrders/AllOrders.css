@@ -1,0 +1,10 @@
+.manage-all-orders{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.manage-order-font{
+    margin-top: 40px;
+    margin-bottom: 30px;
+}

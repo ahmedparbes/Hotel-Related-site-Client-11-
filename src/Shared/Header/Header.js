@@ -13,7 +13,7 @@ const Header = () => {
             <Navbar collapseOnSelect expand="lg" className="nav-bar">
                 <Container>
                     <Navbar.Brand>
-                        <img className="img-logo" src="https://i.ibb.co/pnGHgqT/logopng.webp" alt="" /></Navbar.Brand>
+                        <Link to='/'> <img className="img-logo" src="https://i.ibb.co/pnGHgqT/logopng.webp" alt="" /></Link></Navbar.Brand>
                     <Nav className="mx-5 nav-link justify-content-end ">
                         <Link to="/">Home</Link>
                         <Link to="/all-hotels"> All Hotels</Link>

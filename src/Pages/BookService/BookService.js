@@ -5,6 +5,7 @@ import useAuth from '../../Context/useAuth/useAuth';
 import './BookService.css'
 
 const BookService = () => {
+    // const nameValue = props.hotels.name;
     const { user } = useAuth()
     const history = useHistory();
     const redirect = '/dashboard';

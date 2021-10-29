@@ -32,36 +32,38 @@ const Admin = () => {
 
     return (
         <Container>
-            <div className="wrapper font">
-                <div className="sidebar">
-                    <ul className="siebar-nav">
-                        {/* <li><Link to="/"><i className="fas fa-home"></i>Home</Link></li> */}
-                        <li><Link to="/hotel"><i className="fas fa-plus"></i>Add Hotel</Link></li>
-                        <li><Link to="/my-order"><i className="fas fa-user"></i>My Order</Link></li>
-                        <li><Link to="/register-user"><i className="fas fa-user"></i>Register List</Link></li>
-                    </ul>
-                </div>
-                <div className="main_content">
-                    <div className="header">Welcome!! <span className="text-primary">{user.displayName}</span>. Have a nice day.</div>
-                    <div className="font admin-panel">
-
-                        {
-
-                            users.map(singleUser => <Container>
-                                <div className="user-section">
-                                    <div className="half-img">
-                                        <img src={singleUser.img} alt="" />
-                                    </div>
-                                    <div className="half-width">
-
-                                        <h6>{singleUser.description}</h6>
-                                        <button onClick={() => handleDelete(singleUser._id)} className="cancel-btn">Cancel</button>
-                                    </div>
-                                </div>
-                            </Container>)
-                        }
+            <div className="admin-panel-control">
+                <div className="wrapper font">
+                    <div className="sidebar">
+                        <ul className="siebar-nav">
+                            {/* <li><Link to="/"><i className="fas fa-home"></i>Home</Link></li> */}
+                            <li><Link to="/hotel"><i className="fas fa-plus"></i>Add Hotel</Link></li>
+                            <li><Link to="/my-order"><i className="fas fa-user"></i>My Order</Link></li>
+                            <li><Link to="/all-orders"><i className="fas fa-user"></i>All Orders</Link></li>
+                        </ul>
                     </div>
+                    <div className="main_content">
+                        <div className="header">Welcome!! <span className="text-primary">{user.displayName}</span>. Have a nice day.</div>
+                        <div className="font admin-panel">
 
+                            {
+
+                                users.map(singleUser => <Container>
+                                    <div className="user-section">
+                                        <div className="half-img">
+                                            <img src={singleUser.img} alt="" />
+                                        </div>
+                                        <div className="half-width">
+
+                                            <h6>{singleUser.description}</h6>
+                                            <button onClick={() => handleDelete(singleUser._id)} className="cancel-btn">Cancel</button>
+                                        </div>
+                                    </div>
+                                </Container>)
+                            }
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </Container>
