@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Container } from 'react-bootstrap';
+import TopDestination from '../TopDestination/TopDestination';
 import './HotelDetails.css'
 
 const HotelDetails = () => {
@@ -29,17 +30,9 @@ const HotelDetails = () => {
                     </div>)
                 }
             </div>
+            <TopDestination></TopDestination>
         </Container>
     );
 };
 
 export default HotelDetails;
-
-{/* <div className="single-details">
-<img src={hotel.img} alt="" />
-<div>
-    <h4>{hotel.name}</h4>
-    <p>{hotel.location}</p>
-    <p>{hotel.price}</p>
-</div>
-</div> */}

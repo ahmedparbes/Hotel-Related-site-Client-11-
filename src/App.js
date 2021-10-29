@@ -5,6 +5,7 @@ import Header from './Shared/Header/Header';
 import { BrowserRouter } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import AddHotel from './Pages/AddHotel/AddHotel';
+import Footer from './Shared/Footer/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           </Route>
         </Switch>
       </BrowserRouter>
+      <Footer></Footer>
     </div>
   );
 }

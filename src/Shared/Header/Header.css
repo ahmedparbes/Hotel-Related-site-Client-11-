@@ -1,10 +1,10 @@
 .font{
-    font-family: 'Poppins', sans-serif;
-font-family: 'Roboto Slab', serif;
+font-family: 'Roboto Slab', serif !important;
 }
 
-.img-logo{
-    width: 150px;
+.img-logo {
+    width: 130px;
+  
 }
 
 
@@ -19,5 +19,4 @@ font-family: 'Roboto Slab', serif;
     margin-right: 10px;
 }
 .header-comp{
-background-color: rgb(225, 222, 228);
 }

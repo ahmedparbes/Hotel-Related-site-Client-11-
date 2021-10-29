@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import HotelDetails from '../../Pages/HotelDetails/HotelDetails';
+import Subscribe from '../../Pages/Subscribe/Subscribe';
 import Features from './Features/Features';
 import './Home.css'
 
@@ -25,6 +26,9 @@ const Home = () => {
                 <Features></Features>
             </div>
             <HotelDetails></HotelDetails>
+            <div>
+                <Subscribe></Subscribe>
+            </div>
         </div>
 
 

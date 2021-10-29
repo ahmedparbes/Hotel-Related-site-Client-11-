@@ -1,0 +1,24 @@
+.subscribe-container{
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background-color: rgb(231, 220, 220);
+    
+}
+
+.subscrie-input, .subscribe-update-text{
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.subscribe-image{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.subscrie-input button{
+    background-color: blueviolet;
+    color: white;
+    padding: 5px;
+}
