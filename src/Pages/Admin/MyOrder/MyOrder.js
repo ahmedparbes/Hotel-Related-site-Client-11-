@@ -31,20 +31,29 @@ const MyOrder = () => {
     }
     return (
         <Container>
+            <h2 className="text-primary font">Your Order Summary</h2>
+            <hr />
             <div className="font order-list">
                 {
                     users.map(user => <table
                         key={user._id}
                         className="font" id="customers" >
                         <tr>
-                            <th>Name</th>
+                            {/* <th>Name</th> */}
                             <th>Email</th>
+                            <th>Product ID</th>
+                            <th>Product Name</th>
                             <th>Action</th>
+                            <th>Status</th>
+
                         </tr>
                         <tr>
-                            <td>{user.name}</td>
+                            {/* <td>{user.name}</td> */}
                             <td>{user.email}</td>
+                            <td>{user._id}</td>
+                            <td>{user.productName}</td>
                             <td><button onClick={() => cancelOrder(user._id)}><i className="fas fa-trash-alt"> cancel order</i></button></td>
+                            <td><button><i class="fa fa-clock-o" aria-hidden="true"> Pending</i></button></td>
                         </tr>
 
                     </table>)

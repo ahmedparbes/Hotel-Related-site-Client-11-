@@ -20,15 +20,15 @@ const AllOrders = () => {
 
 
                 {
-                    orders.map(order => <div>
-                        <div>
-                            <h3>{order.name}</h3>
-                            <p>{order.email}</p>
-                        </div>
-                        <div>
-                            <img src="" alt="" srcset="" />
-                        </div>
-                    </div>)
+                    // orders.map(order => <div>
+                    //     <div>
+                    //         <h3>{order.name}</h3>
+                    //         <p>{order.email}</p>
+                    //     </div>
+                    //     <div>
+                    //         <img src="" alt="" srcset="" />
+                    //     </div>
+                    // </div>)
                 }
             </div>
         </Container>

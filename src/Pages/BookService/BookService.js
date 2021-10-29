@@ -1,4 +1,6 @@
 import React, { useRef } from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router';
 import useAuth from '../../Context/useAuth/useAuth';
@@ -8,13 +10,22 @@ const BookService = () => {
     const { id } = useParams();
     const { user } = useAuth()
     const history = useHistory();
-    const redirect = '/dashboard';
+    const redirect = '/my-order';
 
     const nameRef = useRef();
     const emailRef = useRef();
     const desRef = useRef();
     const number = useRef();
+    const productIdRef = useRef()
     const productNameRef = useRef();
+
+    const [data, setData] = useState({});
+    const url = `http://localhost:5000/hotels/${id}`
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setData(data));
+    }, []);
 
     const handlehtmlForm = e => {
         const email = emailRef.current.value;
@@ -22,8 +33,9 @@ const BookService = () => {
         const addre_ss = desRef.current.value;
         const phone = number.current.value;
         const p_name = productNameRef.current.value;
+        const p_id = productIdRef.current.value;
 
-        const Newuser = { name: name, email: email, address: addre_ss, number: phone, productName: p_name }
+        const Newuser = { id: p_id, name: name, email: email, address: addre_ss, number: phone, productName: p_name }
 
         fetch('http://localhost:5000/users', {
             method: 'POST',
@@ -58,7 +70,9 @@ const BookService = () => {
                     <legend className="legend-text">User Email</legend>
                     <input ref={emailRef} type="text" required placeholder="Type email or username" value={user.email} />
                     <legend className="legend-text">Product id</legend>
-                    <input ref={productNameRef} required type="text" id="lname" name="lastname" placeholder="" value={id} />
+                    <input ref={productIdRef} required type="text" id="lname" name="lastname" placeholder="" value={id} />
+                    <legend className="legend-text">Product Name</legend>
+                    <input ref={productNameRef} required type="text" id="lname" name="lastname" placeholder="" value={data.name} />
                     <legend className="legend-text">Address</legend>
                     <input ref={desRef} required type="text" id="lname" name="lastname" placeholder="Address .ex: village, city etc" />
                     <legend className="legend-text">Phone number</legend>
