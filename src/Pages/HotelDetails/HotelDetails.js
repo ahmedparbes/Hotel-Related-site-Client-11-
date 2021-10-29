@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import TopDestination from '../TopDestination/TopDestination';
 import './HotelDetails.css'
 
@@ -26,6 +27,7 @@ const HotelDetails = () => {
                             <h4>{hotel.name}</h4>
                             <p>{hotel.location}</p>
                             <p>{hotel.price}</p>
+                            <Link to="/book"> <button className=" book-button btn-primary">Book Now</button></Link>
                         </div>
                     </div>)
                 }

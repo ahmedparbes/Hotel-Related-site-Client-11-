@@ -31,4 +31,5 @@ input[type=text], select {
 
   .event-container{
     margin-top: 60px;
+    margin-bottom: 100px;
   }

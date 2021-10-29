@@ -13,12 +13,13 @@ const Home = () => {
                 <h2>Find Your Perfect Hotels</h2>
                 <p>Get the best prices on 20,000+ properties</p>
 
-                <div class="wrap">
-                    <div class="search">
-                        <input type="text" class="searchTerm" placeholder="What are you looking for?" />
-                        <button type="submit" class="searchButton">
-                            <i class="fa fa-search"></i>
-                        </button>
+                <div className="wrap">
+                    <div className="search">
+                        <input type="text" className="searchTerm" placeholder="What are you looking for?" />
+                        {/* <button type="submit" className="searchButton">
+                            <i className="fa fa-search"></i>
+                        </button> */}
+                        <img src="https://i.ibb.co/xGx96kq/xcar-png-pagespeed-ic-RMwq-CTkt-Un.webp" alt="" />
                     </div>
                 </div>
             </div>
@@ -29,7 +30,7 @@ const Home = () => {
             <div>
                 <Subscribe></Subscribe>
             </div>
-        </div>
+        </div >
 
 
     );

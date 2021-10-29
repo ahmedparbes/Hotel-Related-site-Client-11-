@@ -1,9 +1,11 @@
 .home-section{
     margin-top: 30px;
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
-    height: 400px;
-    color: white;
+    background-image: url(https://i.ibb.co/6rbLRPL/h1-hero1.webp);
+    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
+    height: 400px; */
+    color: rgb(0, 0, 0);
     display: flex;
+    height: 900px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -26,3 +28,4 @@
 .features-margin{
     margin-top: 50px;
 }
+
