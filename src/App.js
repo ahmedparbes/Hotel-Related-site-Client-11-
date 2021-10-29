@@ -25,7 +25,7 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
-            <PrivateRoute path="/book">
+            <PrivateRoute path="/book/:id">
               <BookService></BookService>
             </PrivateRoute>
             <PrivateRoute path="/dashboard">
@@ -46,7 +46,9 @@ function App() {
             <Route path="/all-orders">
               <AllOrders></AllOrders>
             </Route>
-
+            {/* <Route path="/book/:id">
+              <BookService></BookService>
+            </Route> */}
           </Switch>
         </BrowserRouter>
         <Footer></Footer>
