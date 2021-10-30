@@ -12,22 +12,26 @@ const MyOrder = () => {
     }, []);
 
     const cancelOrder = id => {
-
-        const url = `http://localhost:5000/users/${id}`
-        fetch(url, {
-            method: "DELETE"
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if (data.deletedCount) {
-
-                    alert('Order cancel successfully')
-                    const remain = users.filter(user => user._id !== id)
-                    setUser(remain);
-                }
-
+        const proceed = window.confirm('Are you sure, you want to delete?');
+        if (proceed) {
+            const url = `http://localhost:5000/users/${id}`
+            fetch(url, {
+                method: "DELETE"
             })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if (data.deletedCount) {
+
+                        alert('Order cancel successfully')
+                        const remain = users.filter(user => user._id !== id)
+                        setUser(remain);
+                    }
+
+                })
+        }
+
+
     }
     return (
         <Container>
@@ -35,28 +39,28 @@ const MyOrder = () => {
             <hr />
             <div className="font order-list">
                 {
-                    users.map(user => <table
-                        key={user._id}
-                        className="font" id="customers" >
-                        <tr>
-                            {/* <th>Name</th> */}
-                            <th>Email</th>
-                            <th>Product ID</th>
-                            <th>Product Name</th>
-                            <th>Action</th>
-                            <th>Status</th>
+                    users.map(user => <div className="table">
+                        <table
+                            key={user._id}
+                            className="font" id="customers" >
+                            <tr>
+                                {/* <th>Name</th> */}
+                                <th>Email</th>
+                                <th>Product ID</th>
+                                <th>Product Name</th>
+                                <th>Action</th>
 
-                        </tr>
-                        <tr>
-                            {/* <td>{user.name}</td> */}
-                            <td>{user.email}</td>
-                            <td>{user._id}</td>
-                            <td>{user.productName}</td>
-                            <td><button onClick={() => cancelOrder(user._id)}><i className="fas fa-trash-alt"> cancel order</i></button></td>
-                            <td><button><i class="fa fa-clock-o" aria-hidden="true"> Pending</i></button></td>
-                        </tr>
+                            </tr>
+                            <tr>
+                                {/* <td>{user.name}</td> */}
+                                <td>{user.email}</td>
+                                <td>{user._id}</td>
+                                <td>{user.productName}</td>
+                                <td><button onClick={() => cancelOrder(user._id)}><i className="fas fa-trash-alt"> cancel order</i></button></td>
+                            </tr>
 
-                    </table>)
+                        </table>
+                    </div>)
                 }
             </div>
         </Container>

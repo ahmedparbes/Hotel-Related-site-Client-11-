@@ -14,6 +14,8 @@ import Admin from './Pages/Admin/Admin';
 import MyOrder from './Pages/Admin/MyOrder/MyOrder';
 import HotelDetails from './Pages/HotelDetails/HotelDetails';
 import AllOrders from './Pages/AllOrders/AllOrders';
+import About from './Pages/About/About';
+import Contact from './Pages/Contact/Contact';
 
 function App() {
   return (
@@ -31,20 +33,26 @@ function App() {
             <PrivateRoute path="/dashboard">
               <Admin></Admin>
             </PrivateRoute>
-            <Route path="/hotel">
+            <PrivateRoute path="/hotel">
               <AddHotel></AddHotel>
-            </Route>
-            <Route path="/my-order">
+            </PrivateRoute>
+            <PrivateRoute path="/my-order">
               <MyOrder></MyOrder>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>
             <Route path="/all-hotels">
               <HotelDetails></HotelDetails>
             </Route>
-            <Route path="/all-orders">
+            <PrivateRoute path="/all-orders">
               <AllOrders></AllOrders>
+            </PrivateRoute>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/contact">
+              <Contact></Contact>
             </Route>
             {/* <Route path="/book/:id">
               <BookService></BookService>

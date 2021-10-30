@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import './AddHotel.css'
 
@@ -36,7 +36,8 @@ const AddHotel = () => {
             });
 
 
-    }
+    };
+
 
     return (
         <div className=" event-container font">
@@ -51,7 +52,7 @@ const AddHotel = () => {
                     <label htmlFor="lname"><b>Location</b></label>
                     <input ref={locationRef} required type="text" id="lname" name="lastname" placeholder="Location.." />
                     <label htmlFor="lname"><b>Price</b></label>
-                    <input ref={priceRef} required type="text" id="lname" name="lastname" placeholder="Price.." />
+                    <input ref={priceRef} required type="text" id="lname" name="lastname" placeholder="Price. eg: from €234,00/night" />
                     <label htmlFor="lname"><b>Image</b></label>
                     <input ref={imgRef} required type="text" id="lname" name="lastname" placeholder="Image Link.." />
 

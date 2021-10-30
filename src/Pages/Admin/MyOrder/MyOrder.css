@@ -1,5 +1,9 @@
+.table{
+  overflow-x:auto;
+}
+
 #customers {
-    font-family: Arial, Helvetica, sans-serif;
+   
     border-collapse: collapse;
     width: 100%;
   }

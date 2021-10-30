@@ -8,7 +8,7 @@ const AllOrders = () => {
 
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('http://localhost:5000/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
@@ -20,15 +20,28 @@ const AllOrders = () => {
 
 
                 {
-                    // orders.map(order => <div>
-                    //     <div>
-                    //         <h3>{order.name}</h3>
-                    //         <p>{order.email}</p>
-                    //     </div>
-                    //     <div>
-                    //         <img src="" alt="" srcset="" />
-                    //     </div>
-                    // </div>)
+                    orders.map(order => <div className="table">
+                        <table
+                            key={order._id}
+                            className="font" id="customers" >
+                            <tr>
+                                <th>User Name</th>
+                                <th>Email</th>
+                                <th>Product ID</th>
+                                <th>Product Name</th>
+                                <th>Status</th>
+
+                            </tr>
+                            <tr>
+                                <td>{order.name}</td>
+                                <td>{order.email}</td>
+                                <td>{order._id}</td>
+                                <td>{order.productName}</td>
+                                <td><button><i class="fa fa-clock-o" aria-hidden="true"> Pending</i></button></td>
+                            </tr>
+
+                        </table>
+                    </div>)
                 }
             </div>
         </Container>

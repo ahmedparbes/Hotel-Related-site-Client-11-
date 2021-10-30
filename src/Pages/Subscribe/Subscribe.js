@@ -7,7 +7,7 @@ const Subscribe = () => {
         <Container>
             <div className="font subscribe-container">
                 <div className="subscrie-input">
-                    <input type="text" placeholder="your email" />
+                    <input type="text" placeholder="email" />
                     <button>Subscribe</button>
                 </div>
                 <div className="subscribe-update-text">
