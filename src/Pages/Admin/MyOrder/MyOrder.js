@@ -6,7 +6,7 @@ const MyOrder = () => {
 
     const [users, setUser] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://aqueous-tundra-43046.herokuapp.com/users')
             .then(res => res.json())
             .then(data => setUser(data))
     }, []);
@@ -14,7 +14,7 @@ const MyOrder = () => {
     const cancelOrder = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/users/${id}`
+            const url = `https://aqueous-tundra-43046.herokuapp.com/users/${id}`
             fetch(url, {
                 method: "DELETE"
             })

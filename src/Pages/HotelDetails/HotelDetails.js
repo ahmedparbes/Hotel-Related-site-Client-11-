@@ -13,7 +13,7 @@ const HotelDetails = () => {
     const [hoteels, setHotel] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/hotels')
+        fetch('https://aqueous-tundra-43046.herokuapp.com/hotels')
             .then(res => res.json())
             .then(data => setHotel(data))
     }, []);

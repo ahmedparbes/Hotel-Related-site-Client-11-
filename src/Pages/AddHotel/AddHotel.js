@@ -18,7 +18,7 @@ const AddHotel = () => {
         const pri_ce = priceRef.current.value;
         const newValunteer = { name: name, location: loc, price: pri_ce, img: imgs };
 
-        fetch('http://localhost:5000/hotels', {
+        fetch('https://aqueous-tundra-43046.herokuapp.com/hotels', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

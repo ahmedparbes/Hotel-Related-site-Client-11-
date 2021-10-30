@@ -20,7 +20,7 @@ const BookService = () => {
     const productNameRef = useRef();
 
     const [data, setData] = useState({});
-    const url = `http://localhost:5000/hotels/${id}`
+    const url = `https://aqueous-tundra-43046.herokuapp.com/hotels/${id}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -37,7 +37,7 @@ const BookService = () => {
 
         const Newuser = { id: p_id, name: name, email: email, address: addre_ss, number: phone, productName: p_name }
 
-        fetch('http://localhost:5000/users', {
+        fetch('https://aqueous-tundra-43046.herokuapp.com/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
