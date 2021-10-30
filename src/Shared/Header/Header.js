@@ -22,7 +22,7 @@ const Header = () => {
                             {
                                 !user.email && <div className="py-1 my-1">
                                     <button className="btn-danger login-btn ">
-                                        <Link to="/login"><i class="fas fa-sign-in-alt"><span className="font"> Login</span></i></Link></button>
+                                        <Link to="/login"><i class="fas fa-sign-in-alt"><span className="font login-btn"> Login</span></i></Link></button>
                                 </div>
                             }
                             {
