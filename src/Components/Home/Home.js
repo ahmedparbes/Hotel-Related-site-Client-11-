@@ -15,11 +15,13 @@ const Home = () => {
 
                 <div className="wrap">
                     <div className="search">
-                        <input type="text" className="searchTerm" placeholder="What are you looking for?" />
-                        {/* <button type="submit" className="searchButton">
-                            <i className="fa fa-search"></i>
-                        </button> */}
-                        <img src="https://i.ibb.co/xGx96kq/xcar-png-pagespeed-ic-RMwq-CTkt-Un.webp" alt="" />
+                        <div>
+                            <input type="text" className="searchTerm" placeholder="What are you looking for?" />
+                            <button className="btn-primary search-btn">Search</button>
+                        </div>
+                        <div>
+                            <img src="https://i.ibb.co/xGx96kq/xcar-png-pagespeed-ic-RMwq-CTkt-Un.webp" alt="" />
+                        </div>
                     </div>
                 </div>
             </div>
