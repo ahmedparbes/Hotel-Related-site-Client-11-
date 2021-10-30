@@ -14,7 +14,7 @@ const Features = () => {
                         <p>Buy at a lower Price.</p>
                     </div>
                     <div className="half-image">
-                        <img src="https://svgshare.com/i/bYG.svg" alt="" />
+                        <img src="https://i.ibb.co/c1Wqq6m/ico-piggy-bank.png" alt="" />
                     </div>
                 </div>
                 <div className="section-container">
@@ -23,7 +23,7 @@ const Features = () => {
                         <p>Buy at a lower Price.</p>
                     </div>
                     <div className="half-image">
-                        <img src="https://svgshare.com/i/bZ8.svg" alt="" />
+                        <img src="https://i.ibb.co/HX8qW3W/ico-insurance.png" alt="" />
                     </div>
                 </div>
                 <div className="section-container">
@@ -32,7 +32,7 @@ const Features = () => {
                         <p>Buy at a lower Price.</p>
                     </div>
                     <div className="half-image">
-                        <img src="https://svgshare.com/i/bZt.svg" alt="" />
+                        <img src="https://i.ibb.co/tsSh6hW/ico-eath.png" alt="" />
                     </div>
                 </div>
             </div>
