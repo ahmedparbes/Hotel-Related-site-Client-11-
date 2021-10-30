@@ -1,10 +1,20 @@
-# Getting Started with Create React App
+# Getting Started with Tralive App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://tralive-app.web.app).
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+This project has been created so that you can book a hotel wherever you go. 
+In this project you can:
+
+- book whatever hotel you want.
+- You can book a hotel for a small amount of money.
+- project includes the service of your choice from the Secure Login System Service section.
+- you can add the service of your choice
+- you can cancel the order after placing the order
+- and more
 
 ### `yarn start`
 
