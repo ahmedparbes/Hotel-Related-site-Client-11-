@@ -2,16 +2,21 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './AllOrders.css'
 
 const AllOrders = () => {
+
+
 
     const [orders, setOrders] = useState([]);
     useEffect(() => {
         fetch('https://aqueous-tundra-43046.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
+
     }, []);
+
 
     const cancelOrder = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
@@ -56,6 +61,7 @@ const AllOrders = () => {
                                     <th>Email</th>
                                     <th>Product ID</th>
                                     <th>Product Name</th>
+                                    <th>Status</th>
                                     <th>Action</th>
 
                                 </tr>
@@ -64,6 +70,7 @@ const AllOrders = () => {
                                     <td>{order.email}</td>
                                     <td>{order._id}</td>
                                     <td>{order.productName}</td>
+                                    <td><Link to={`/update/${order._id}`}><button>{order.status}</button></Link></td>
                                     <td><button onClick={() => cancelOrder(order._id)}><i className="fas fa-trash-alt"> cancel order</i></button></td>
                                 </tr>
 

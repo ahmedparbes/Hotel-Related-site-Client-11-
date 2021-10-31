@@ -18,6 +18,8 @@ const BookService = () => {
     const number = useRef();
     const productIdRef = useRef()
     const productNameRef = useRef();
+    const DefaultStatus = useRef();
+    const NoteStatus = useRef();
 
     const [data, setData] = useState({});
     const url = `https://aqueous-tundra-43046.herokuapp.com/hotels/${id}`
@@ -34,8 +36,10 @@ const BookService = () => {
         const phone = number.current.value;
         const p_name = productNameRef.current.value;
         const p_id = productIdRef.current.value;
+        const d_status = DefaultStatus.current.value;
+        const no_te = NoteStatus.current.value;
 
-        const Newuser = { id: p_id, name: name, email: email, address: addre_ss, number: phone, productName: p_name }
+        const Newuser = { id: p_id, name: name, email: email, address: addre_ss, number: phone, productName: p_name, status: d_status, note: no_te }
 
         fetch('https://aqueous-tundra-43046.herokuapp.com/users', {
             method: 'POST',
@@ -77,6 +81,10 @@ const BookService = () => {
                     <input ref={desRef} required type="text" id="lname" name="lastname" placeholder="Address .ex: village, city etc" />
                     <legend className="legend-text">Phone number</legend>
                     <input ref={number} required type="text" id="lname" name="lastname" placeholder="your phone number" />
+                    <legend className="legend-text">Default Status</legend>
+                    <input ref={DefaultStatus} required type="text" id="lname" name="lastname" value="Pending" />
+                    <legend className="legend-text">Enter Note</legend>
+                    <input ref={NoteStatus} required type="text" id="lname" name="lastname" placeholder="Enter a note" />
                     <input type="submit" value="Place Order" />
                 </form>
             </div>

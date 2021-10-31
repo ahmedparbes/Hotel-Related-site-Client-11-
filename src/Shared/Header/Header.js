@@ -18,11 +18,11 @@ const Header = () => {
                         <Nav className="px-7 nav-link">
                             <Link to="/">Home</Link>
                             <Link to="/all-hotels"> All Hotels</Link>
-                            <Link to="/contact">Contact</Link>
+                            <Link to="/about">About</Link>
                             {
                                 !user.email && <div className="py-1 my-1">
                                     <button className="btn-danger login-btn ">
-                                        <Link to="/login"><i class="fas fa-sign-in-alt"><span className="font login-btn"> Login</span></i></Link></button>
+                                        <Link to="/login"><i className="fas fa-sign-in-alt"><span className="font login-btn"> Login</span></i></Link></button>
                                 </div>
                             }
                             {
@@ -31,12 +31,12 @@ const Header = () => {
                             <br />
                             {
                                 user.email &&
-                                <button onClick={logOutGoogle} className="btn-warning  "><i class="fa fa-sign-out" aria-hidden="true"><span className="font mx-1"> Logout</span></i></button>
+                                <button onClick={logOutGoogle} className="btn-warning  "><i className="fa fa-sign-out" aria-hidden="true"><span className="font mx-1"> Logout</span></i></button>
                             }
 
 
                             {
-                                user.email && <p className="user-name" ><i class=" fas fa-user-tie"><span className="font ">  {user.displayName}</span></i></p>
+                                user.email && <p className="user-name" ><i className=" fas fa-user-tie"><span className="font ">  {user.displayName}</span></i></p>
                             }
 
                         </Nav>

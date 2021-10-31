@@ -16,6 +16,8 @@ import HotelDetails from './Pages/HotelDetails/HotelDetails';
 import AllOrders from './Pages/AllOrders/AllOrders';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
+import OrderStatus from './Pages/Admin/OrderStatus/OrderStatus';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -54,9 +56,12 @@ function App() {
             <Route path="/contact">
               <Contact></Contact>
             </Route>
-            {/* <Route path="/book/:id">
-              <BookService></BookService>
-            </Route> */}
+            <Route path="/update/:id">
+              <OrderStatus></OrderStatus>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
         </BrowserRouter>
         <Footer></Footer>
