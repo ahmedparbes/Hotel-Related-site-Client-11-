@@ -32,7 +32,7 @@ const HotelDetails = () => {
             </div>
             <div className="font hotel-details">
                 {
-                    hoteels.map(hotel => <div className="single-details">
+                    hoteels.map(hotel => <div key={hotel._id} className="single-details">
                         <img src={hotel.img} alt="" />
                         <div>
                             <h4>{hotel.name}</h4>
