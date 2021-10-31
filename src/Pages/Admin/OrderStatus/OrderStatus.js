@@ -51,10 +51,13 @@ const OrderStatus = () => {
 
     return (
         <Container>
-            <div className="font">
-                <h2>Type <span className="text-primary">Approve</span> for approve this Order</h2>
+            <div className="font order-status-handle">
+                <h2 className="order-title">Type <span className="text-primary">Approve</span> for approve this Order</h2>
+                <hr />
                 <form onSubmit={handleUpdateUser}>
+                    <label className="label-text-status"><b>Default Status</b></label>
                     <input type="text" onChange={handleStatusChange} defaultValue={user.status || ''} />
+                    <label className="label-text-status"><b>Add a note</b></label>
                     <input type="text" onChange={handleNoteChange} defaultValue={user.note || ''} />
 
                     <input type="submit" value="Update" />

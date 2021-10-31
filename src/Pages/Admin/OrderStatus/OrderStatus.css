@@ -1,4 +1,14 @@
-.status-section{
+.order-status-handle{
     margin-top: 70px;
     margin-bottom: 80px;
+}
+
+.label-text-status{
+    text-align: left;
+    color: gray;
+    font-size: 17px;
+}
+
+.order-title{
+    margin-bottom: 20px;
 }
