@@ -2,21 +2,28 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import TopDestination from '../TopDestination/TopDestination';
 import './HotelDetails.css'
+import useAuth from '../../Context/useAuth/useAuth';
 
 const HotelDetails = () => {
 
+    const { isLoading } = useAuth();
+
 
     const [hoteels, setHotel] = useState([]);
+
 
     useEffect(() => {
         fetch('https://aqueous-tundra-43046.herokuapp.com/hotels')
             .then(res => res.json())
             .then(data => setHotel(data))
     }, []);
+    if (isLoading) {
+        return <Spinner animation="border" variant="danger" />
+    }
 
     return (
         <Container>

@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import './MyOrder.css'
+import useAuth from '../../../Context/useAuth/useAuth'
 
 const MyOrder = () => {
+
+    const { user } = useAuth()
 
     const [users, setUser] = useState([]);
     useEffect(() => {
         fetch('https://aqueous-tundra-43046.herokuapp.com/users')
             .then(res => res.json())
-            .then(data => setUser(data))
+            .then(data => {
+                const remain = data.filter(u => u.email == user.email);
+                setUser(remain)
+            })
+
     }, []);
 
     const cancelOrder = id => {
