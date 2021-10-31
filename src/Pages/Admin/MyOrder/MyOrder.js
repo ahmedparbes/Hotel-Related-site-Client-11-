@@ -57,6 +57,7 @@ const MyOrder = () => {
                                 <th>Product ID</th>
                                 <th>Product Name</th>
                                 <th>Action</th>
+                                <th>Status</th>
 
                             </tr>
                             <tr>
@@ -64,6 +65,7 @@ const MyOrder = () => {
                                 <td>{user.email}</td>
                                 <td>{user._id}</td>
                                 <td>{user.productName}</td>
+                                <td>{user.status}</td>
                                 <td><button onClick={() => cancelOrder(user._id)}><i className="fas fa-trash-alt"> cancel order</i></button></td>
                             </tr>
 

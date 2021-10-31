@@ -64,9 +64,9 @@ const OrderStatus = () => {
                 <hr />
                 <form onSubmit={handleForm}>
                     <label> Status</label>
-                    <input onChange={handleStatus} type="text" id="fname" name="firstname" placeholder=" Product name.." value={status.status || ''} />
-                    <label> Quantity</label>
-                    <input onChange={handleNote} type="text" id="fname" name="firstname" placeholder=" Product name.." value={status.note || ''} />
+                    <input onChange={handleStatus} type="text" id="fname" name="firstname" placeholder=" Product Status.." value={status.status || ''} />
+                    <label>Note</label>
+                    <input onChange={handleNote} type="text" id="fname" name="firstname" placeholder=" Product Note.." value={status.note || ''} />
                     <input type="submit" value="Submit" />
                 </form>
 
